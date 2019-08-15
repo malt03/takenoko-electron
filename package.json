@@ -18,10 +18,12 @@
   },
   "build": {
     "appId": "com.malt03.takenoko",
-    "productName": "たけのこ投票機",
     "mac": {
-      "target": "dmg",
+      "target": "zip",
       "provisioningProfile": "./pprofile/wildcard.provisionprofile"
+    },
+    "win": {
+      "target": "zip"
     }
   }
 }
