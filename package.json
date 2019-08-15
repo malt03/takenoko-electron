@@ -8,7 +8,8 @@
     "name": "Koji Murata"
   },
   "scripts": {
-    "pack": "electron-builder --dir",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
     "start": "electron ."
   },
   "devDependencies": {
