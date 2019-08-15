@@ -17,6 +17,11 @@
     "electron-builder": "^21.2.0"
   },
   "build": {
-    "appId": "com.malt03.takenoko"
+    "appId": "com.malt03.takenoko",
+    "productName": "たけのこ投票機",
+    "mac": {
+      "target": "dmg",
+      "provisioningProfile": "./pprofile/wildcard.provisionprofile"
+    }
   }
 }
