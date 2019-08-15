@@ -3,6 +3,8 @@ let mainWindow;
 
 function createWindow () {
   mainWindow = new BrowserWindow({ width: 360, height: 720 });
+  mainWindow.on('page-title-updated', (evt) => { evt.preventDefault(); });
+  mainWindow.setTitle('たけのこ投票機');
   mainWindow.loadURL('https://www.meiji.co.jp/sweets/chocolate/kinotake/cmp/2019senkyo/')
   reloadAndClick();
   setInterval(update, 1000);
@@ -49,7 +51,7 @@ function reloadAndClick() {
         timer.style.zIndex = 99999;
         timer.style.backgroundColor = 'red';
         timer.style.color = 'white';
-        timer.style.fontSize = '16pt';
+        timer.style.fontSize = '14pt';
         timer.style.position = 'fixed';
         timer.style.right = 0;
         timer.style.top = 0;
