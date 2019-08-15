@@ -1,0 +1,21 @@
+{
+  "name": "takenoko",
+  "version": "0.0.1",
+  "description": "vote to takenoko",
+  "main": "main.js",
+  "author": {
+    "email": "malt.koji@gmail.com",
+    "name": "Koji Murata"
+  },
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^6.0.2",
+    "electron-builder": "^21.2.0"
+  },
+  "build": {
+    "appId": "com.malt03.takenoko"
+  }
+}
