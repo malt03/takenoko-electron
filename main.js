@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 let mainWindow;
 
 function createWindow () {
@@ -6,6 +6,8 @@ function createWindow () {
   mainWindow.on('page-title-updated', (evt) => { evt.preventDefault(); });
   mainWindow.setTitle('たけのこ投票機');
   mainWindow.loadURL('https://www.meiji.co.jp/sweets/chocolate/kinotake/cmp/2019senkyo/')
+  mainWindow.isMenuBarVisible = false;
+
   reloadAndClick();
   setInterval(update, 1000);
 }
@@ -71,5 +73,6 @@ function reloadAndClick() {
   mainWindow.webContents.executeJavaScript(script);
 }
 
+Menu.setApplicationMenu(null);
 app.on('ready', createWindow);
 app.on('window-all-closed', function () { app.quit(); });
